@@ -9,7 +9,7 @@ let generateFingers = (() => {
             yield sleep(400);
         }
         var hash = window.location.hash;
-        var thingDiv = '<div id="thing" style="font-size: 250px; position: absolute; top: ' + top + 'px; left: ' + left + '" >' + hash + '</div>';
+        var thingDiv = '<div id="thing" style="color: #0000FF; font-size: 250px; position: absolute; top: ' + top + 'px; left: ' + left + '" >' + hash.substr(1) + '</div>';
         $("#container").append(thingDiv);
     });
 
