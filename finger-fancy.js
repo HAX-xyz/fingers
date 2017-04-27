@@ -6,9 +6,13 @@ async function generateFingers(numberOfFingers) {
         var top = (Math.random() * 10000) % 700;
         var left = (Math.random() * 10300) % 700;
         var fingerDiv = '<div id="oneFinger' + i + '" style="font-size: 250px; position: absolute; top: ' + top + 'px; left: ' + left + '" >🖕</div>';
+
         $("#container").append(fingerDiv);
         await sleep(400);
     }
+    var hash = window.location.hash;
+    var thingDiv = '<div id="thing" style="font-size: 250px; position: absolute; top: ' + top + 'px; left: ' + left + '" >' + hash + '</div>';
+    $("#container").append(thingDiv);
 }
 
 $(document).ready(function () {
